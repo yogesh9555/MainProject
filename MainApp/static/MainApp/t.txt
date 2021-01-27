@@ -1,0 +1,5 @@
+
+    <title>{% block tital %} {% endblock %}</title>
+  <style>
+      {% block css %} {% endblock %}
+  </style>

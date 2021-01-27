@@ -1,0 +1,127 @@
+{% extends "MainApp/navbar.html" %} 
+
+{% block tital %} About-Us  {% endblock %}
+{% block css %} 
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #70daa8;
+  }
+  
+ .about .column
+  {
+      width:45%;
+      float:left;
+      padding:100px 10px; 
+  }
+
+  .about .row:after{
+      content:"";
+      display:table;
+      clear:both;
+  }
+
+ 
+
+  @media screen and (max-width:600px)
+  {
+      .column
+      {
+          width:100%;
+          display:block;
+          margin-bottom: -110px;
+          text-align:center;
+      }
+  }
+
+  .about .card
+  {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      max-width:300px;
+      margin:auto;
+      background-color:white;
+      text-align:center;
+      border-radius:50px;
+      padding-bottom:15px;
+  }
+
+  .about .title
+  {
+      color:gray;
+      font-size:13px;
+  }
+
+ .about button
+  {
+      border:none;
+      padding:8px;
+      display: inline-block;
+      color:white;
+      background-color:black;
+      cursor:pointer;
+      width:50%;
+      border-radius:10px;
+      font-size:18px;
+      text-align:center;
+  }
+
+  .about a{
+      text-decoration: none;
+      font-size:22px;
+      color:black;
+  }
+
+  .about a:hover,button:hover{
+      opacity: 0.6;
+  }
+  .card p{
+    border-radius:50px;
+    margin-top:-3px;
+  }
+  .card img{
+    border-radius:50px;
+    
+  }
+    {% endblock %}
+
+    {% block body %}
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="content">
+   
+   
+<div class="row about">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'MainApp/images/person-1.jpg' %}" style="width:150px;height:auto;padding-top:10px">
+      <h1>Yogesh Jagwan</h1>
+      <p class="title">Web Developer</p>
+      <p>DAV College</p>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <p><button>Contact</button></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'MainApp/images/person-1.jpg' %}" style="width:150px;height:auto;padding-top:10px">
+      <h1>Varun Gupta</h1>
+      <p class="title">CEO & Founder</p>
+      <p>DAV College</p>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <p><button>Contact</button></p>
+    </div>
+  </div>
+</div>
+    </div>
+    
+
+   
+
+    {% endblock %}
